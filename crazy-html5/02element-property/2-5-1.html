@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>2.5.1垃圾箱实现</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        section {
+            margin: 20px;
+        }
+
+        section>aside {
+            float: left;
+            display: block;
+            background: gray;
+            height: 425px;
+            width: 150px;
+            margin-right: 10px;
+        }
+
+        section>aside>p {
+            font-size: 40px;
+            width: 40px;
+            margin: 0 auto;
+        }
+
+        section>div {
+            float: left;
+        }
+
+        section>div>ul {
+            list-style: none;
+        }
+
+        section>div>ul>li {
+            background: rgb(217, 195, 166);
+            width: 400px;
+            height: 50px;
+            margin-bottom: 20px;
+            border: 2px dashed rgb(122, 157, 143);
+            text-align: center;
+            line-height: 50px;
+        }
+
+        section>div>ul>li:hover {
+            background: rgb(200, 190, 214);
+        }
+    </style>
+</head>
+
+<body>
+
+    <section>
+        <aside id="dustbin">
+            <p>垃圾箱</p>
+        </aside>
+        <div>
+            <ul id="projectList">
+                <li draggable="true">列表1</li>
+                <li draggable="true">列表2</li>
+                <li draggable="true">列表3</li>
+                <li draggable="true">列表4</li>
+                <li draggable="true">列表5</li>
+                <li draggable="true">列表6</li>
+            </ul>
+            </ul>
+        </div>
+    </section>
+
+    <script>
+        window.onload = function() {
+            var lis = document.getElementsByTagName("li");
+            for (var i = 0; i < lis.length; i++) {
+                var li = lis[i];
+                li.ondragstart = function(ev) {
+                    ev.dataTransfer.effectAllowed = "move";
+                    ev.dataTransfer.setData("text", ev.target.innerHTML);
+                    ev.dataTransfer.setDragImage(ev.target, 0, 0);
+                    eleDrag = ev.target;
+                    return true;
+                };
+                li.ondragend = function(ev) {
+                    ev.dataTransfer.clearData("text");
+                    eleDrag = null;
+                    return false;
+                };
+            }
+
+            var dustEle = document.getElementById("dustbin");
+            dustEle.ondragover = function(ev) {
+                ev.preventDefault();
+                return true;
+            };
+            dustEle.ondragenter = function(ev) {
+                this.style.background = "rgb(232, 191, 194)";
+                return true;
+            };
+            dustEle.ondrop = function(ev) {
+                if (eleDrag) {
+                    alert("删除");
+                    // eleDrag.parentNode.removeChild
+                    document.getElementById("projectList").removeChild(eleDrag);
+                }
+                this.style.color = "gray";
+                return false;
+            };
+        };
+    </script>
+</body>
+
+</html>
+</body>
+
+</html>
+</body>
+
+</html>
