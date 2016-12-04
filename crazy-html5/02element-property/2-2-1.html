@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+
+<body>
+    <div>
+        <p>我们都是坏孩子，哇哈哈哈</p>
+        <ul>
+            <li>孙悟空</li>
+            <li>糯扎</li>
+            <li>风扇演义</li>
+        </ul>
+        <table border id="stblTable">
+            <caption>师徒部落通讯录</caption>
+            <thead>
+                <tr>
+                    <th>编号</th>
+                    <th>姓名</th>
+                    <th>电话</th>
+                    <th>地区</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td rowspan="2">1001</td>
+                    <td>孟旭东</td>
+                    <td>18588718876</td>
+                    <td>丰县</td>
+                </tr>
+                <tr>
+                    <td>徐芝冠</td>
+                    <td>19893782321</td>
+                    <td>广州</td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+
+    <script>
+        var tds = document.getElementById("stblTable").getElementsByTagName("td");
+        for (var i = 0; i < tds.length; i++) {
+            var td = tds[i];
+            td.onclick = function() {
+                this.setAttribute("contenteditable", true);
+                console.log(this.getAttribute("contenteditable"));
+            }
+        }
+    </script>
+</body>
+
+</html>
+
+</html>
+
+
+</html>

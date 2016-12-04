@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>2.3.3特殊功能元素</title>
+</head>
+
+<body>
+    <meter min="200" max="500" value="350" low="300" high="400" optimum="500" id="myMeter"></meter>
+    <br>
+    <progress min="200" max="500" value="350" low="300" high="400" optimum="500"></progress>
+</body>
+
+<script type="text/javascript">
+    var t = setInterval(function() {
+        document.getElementById("myMeter").value += 10;
+    }, 1000);
+</script>
+
+</html>
