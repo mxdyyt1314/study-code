@@ -6,10 +6,60 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>2.5HTML5新增的拖放API</title>
+    <!-- 拖放是由拖和放两部分组成！ -->
+    <style>
+        #uploadBox {
+            width: 200px;
+            height: 200px;
+            background: rgb(146, 195, 210);
+            border: 1px dashed red;
+        }
+    </style>
 </head>
 
 <body>
+    <div id="imgbox" draggable="true" style="border:1px solid red;background:rgb(155, 192, 226)">
+        <h1>百度图片</h1>
+        <img src="image/baidu.png" alt="baidu">
+    </div>
 
+    <div id="uploadBox" draggable="true">
+
+    </div>
+    <script>
+        window.onload = function() {
+            document.getElementById("imgbox").ondragstart = function(evt) {
+                evt.dataTransfer.setData("text/plain", "http://www.baidu.com");
+            };
+            document.ondragover = function(evt) {
+                return false;
+            }
+            document.getElementById("uploadBox").ondragenter = function(evt) {
+                console.log("上传");
+                return false;
+            };
+            document.getElementById("uploadBox").ondragleave = function(evt) {
+                console.log("离开");
+                return false;
+            };
+            // document.getElementById("uploadBox").ondrag = function(evt) {
+            //     this.style.position = "absolute";
+            //     this.style.left = (evt.pageX) + "px";
+            //     this.style.top = evt.pageY + "px";
+            //     console.log(this.style.left + "," + this.style.top);
+            // }
+            var uploadbox = document.getElementById("uploadBox");
+            document.ondragover = function(evt) {
+                return false;
+            };
+            document.ondrop = function(evt) {
+                uploadbox.style.position = "absolute";
+                uploadbox.style.left = (evt.pageX) + "px";
+                uploadbox.style.top = (evt.pageY) + "px";
+                console.log(evt);
+            }
+        };
+    </script>
 </body>
 
 </html>
