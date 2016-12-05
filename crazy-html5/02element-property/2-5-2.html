@@ -36,7 +36,7 @@
 
         .collect {
             border: 2px dashed green;
-            height: 100px;
+            min-height: 100px;
             width: 70%;
             float: left;
         }
@@ -85,6 +85,9 @@
             }
         }
         var collectEle = document.getElementById("collect");
+        collectEle.ondragover = function(ev) {
+            return false;
+        }
         collectEle.ondrop = function(ev) {
             console.log("drop");
             var text = ev.dataTransfer.getData("text/plain");

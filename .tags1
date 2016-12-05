@@ -4,3 +4,26 @@
 !_TAG_PROGRAM_NAME	Exuberant Ctags	//
 !_TAG_PROGRAM_URL	http://ctags.sourceforge.net	/official site/
 !_TAG_PROGRAM_VERSION	5.8	//
+html	I:\study-code\crazy-html5\02element-property\2-5-2.html	/^<html lang="en">$/;"	function	line:2
+head	I:\study-code\crazy-html5\02element-property\2-5-2.html	/^<head>$/;"	function	line:4
+meta	I:\study-code\crazy-html5\02element-property\2-5-2.html	/^    <meta charset="UTF-8">$/;"	function	line:5
+meta	I:\study-code\crazy-html5\02element-property\2-5-2.html	/^    <meta name="viewport" content="width=device-width, initial-scale=1.0">$/;"	function	line:6
+meta	I:\study-code\crazy-html5\02element-property\2-5-2.html	/^    <meta http-equiv="X-UA-Compatible" content="ie=edge">$/;"	function	line:7
+title	I:\study-code\crazy-html5\02element-property\2-5-2.html	/^    <title>2.5.2拖放<\/title>$/;"	function	line:8
+style	I:\study-code\crazy-html5\02element-property\2-5-2.html	/^    <style>$/;"	function	line:9
+body	I:\study-code\crazy-html5\02element-property\2-5-2.html	/^<body>$/;"	function	line:56
+div	I:\study-code\crazy-html5\02element-property\2-5-2.html	/^    <div class="list project" id="projectList">$/;"	function	line:57
+h	I:\study-code\crazy-html5\02element-property\2-5-2.html	/^        <h1>项目列表<\/h1>$/;"	function	line:58
+ul	I:\study-code\crazy-html5\02element-property\2-5-2.html	/^        <ul>$/;"	function	line:59
+li	I:\study-code\crazy-html5\02element-property\2-5-2.html	/^            <li draggable="true">疯狂java联盟<\/li>$/;"	function	line:60
+li	I:\study-code\crazy-html5\02element-property\2-5-2.html	/^            <li draggable="true">疯狂软件教育<\/li>$/;"	function	line:61
+li	I:\study-code\crazy-html5\02element-property\2-5-2.html	/^            <li draggable="true">关于我们<\/li>$/;"	function	line:62
+li	I:\study-code\crazy-html5\02element-property\2-5-2.html	/^            <li draggable="true">疯狂成员<\/li>$/;"	function	line:63
+li	I:\study-code\crazy-html5\02element-property\2-5-2.html	/^            <li draggable="true">传智播客<\/li>$/;"	function	line:64
+li	I:\study-code\crazy-html5\02element-property\2-5-2.html	/^            <li draggable="true">黑牛程序员<\/li>$/;"	function	line:65
+div	I:\study-code\crazy-html5\02element-property\2-5-2.html	/^    <div class="list collect" id="collect">$/;"	function	line:69
+h	I:\study-code\crazy-html5\02element-property\2-5-2.html	/^        <h1 ondragleave="return false;">收藏夹<\/h1>$/;"	function	line:70
+ul	I:\study-code\crazy-html5\02element-property\2-5-2.html	/^        <ul id="collectUl"><\/ul>$/;"	function	line:71
+div	I:\study-code\crazy-html5\02element-property\2-5-2.html	/^    <div class="dustbin" id="dustbin">$/;"	function	line:74
+img	I:\study-code\crazy-html5\02element-property\2-5-2.html	/^        <img src="image\/dustbin.jpg" alt="" id="dustimg">$/;"	function	line:75
+script	I:\study-code\crazy-html5\02element-property\2-5-2.html	/^    <script>$/;"	function	line:78
