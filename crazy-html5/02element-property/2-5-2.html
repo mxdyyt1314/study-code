@@ -6,10 +6,103 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>2.5.2拖放</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        .list {
+            border: 2px dashed blue;
+            overflow: hidden;
+            margin: 10px;
+        }
+
+        .list>h1 {
+            margin-left: 10px;
+        }
+
+        .list>ul>li {
+            width: 100px;
+            height: 100px;
+            background: rgb(202, 224, 194);
+            margin-right: 10px;
+            float: left;
+            list-style: none;
+            text-align: center;
+            line-height: 100px;
+            margin: 10px;
+        }
+
+        .collect {
+            border: 2px dashed green;
+            min-height: 100px;
+            width: 70%;
+            float: left;
+        }
+
+        .dustbin {
+            float: left;
+            /*border: 1px dashed skyblue;*/
+            margin: 10px;
+        }
+
+        .dustbin>img {
+            width: 65%;
+        }
+    </style>
 </head>
 
 <body>
+    <div class="list project" id="projectList">
+        <h1>项目列表</h1>
+        <ul>
+            <li draggable="true">疯狂java联盟</li>
+            <li draggable="true">疯狂软件教育</li>
+            <li draggable="true">关于我们</li>
+            <li draggable="true">疯狂成员</li>
+            <li draggable="true">传智播客</li>
+            <li draggable="true">黑牛程序员</li>
+        </ul>
+    </div>
 
+    <div class="list collect" id="collect">
+        <h1 ondragleave="return false;">收藏夹</h1>
+        <ul id="collectUl"></ul>
+    </div>
+
+    <div class="dustbin" id="dustbin">
+        <img src="image/dustbin.jpg" alt="" id="dustimg">
+    </div>
+
+    <script>
+        var lis = document.getElementById("projectList").getElementsByTagName("li");
+        for (var i = 0; i < lis.length; i++) {
+            var li = lis[i];
+            li.ondragstart = function(ev) {
+                console.log("move");
+                ev.dataTransfer.setData("text/plain", "<item>" + ev.target.innerHTML);
+            }
+        }
+        var collectEle = document.getElementById("collect");
+        collectEle.ondragover = function(ev) {
+            return false;
+        }
+        collectEle.ondrop = function(ev) {
+            console.log("drop");
+            var text = ev.dataTransfer.getData("text/plain");
+            if (text.indexOf("<item>") > -1) {
+                var newEle = document.createElement("li");
+                newEle.id = new Date().getUTCMilliseconds();
+                newEle.innerHTML = text.substr(6);
+                newEle.draggable = true;
+                document.getElementById("collectUl").appendChild(newEle);
+            }
+        };
+        collectEle.onclick = function() {
+            console.log("click");
+        };
+    </script>
 </body>
 
 </html>
