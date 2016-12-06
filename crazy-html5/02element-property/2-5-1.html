@@ -11,11 +11,11 @@
             margin: 0;
             padding: 0;
         }
-        
+
         section {
             margin: 20px;
         }
-        
+
         section>aside {
             float: left;
             display: block;
@@ -24,21 +24,21 @@
             width: 150px;
             margin-right: 10px;
         }
-        
+
         section>aside>p {
             font-size: 40px;
             width: 40px;
             margin: 0 auto;
         }
-        
+
         section>div {
             float: left;
         }
-        
+
         section>div>ul {
             list-style: none;
         }
-        
+
         section>div>ul>li {
             background: rgb(217, 195, 166);
             width: 400px;
@@ -48,7 +48,7 @@
             text-align: center;
             line-height: 50px;
         }
-        
+
         section>div>ul>li:hover {
             background: rgb(200, 190, 214);
         }
@@ -69,22 +69,22 @@
                 <li draggable="true">列表5</li>
                 <li draggable="true">列表6</li>
             </ul>
-            </ul>
         </div>
     </section>
+    <script src="js/demo.js"></script>
     <script>
-        window.onload = function () {
+        window.onload = function() {
             var lis = document.getElementsByTagName("li");
             for (var i = 0; i < lis.length; i++) {
                 var li = lis[i];
-                li.ondragstart = function (ev) {
+                li.ondragstart = function(ev) {
                     ev.dataTransfer.effectAllowed = "move";
                     ev.dataTransfer.setData("text", ev.target.innerHTML);
                     ev.dataTransfer.setDragImage(ev.target, 0, 0);
                     window.eleDrag = ev.target;
                     return true;
                 };
-                li.ondragend = function (ev) {
+                li.ondragend = function(ev) {
                     ev.dataTransfer.clearData("text");
                     window.eleDrag = null;
                     return false;
@@ -92,19 +92,18 @@
             }
 
             var dustEle = document.getElementById("dustbin");
-            dustEle.ondragover = function (ev) {
+            dustEle.ondragover = function(ev) {
                 ev.preventDefault();
                 return true;
             };
-            dustEle.ondragenter = function (ev) {
+            dustEle.ondragenter = function(ev) {
                 this.style.background = "rgb(232, 191, 194)";
                 return true;
             };
-            dustEle.ondrop = function (ev) {
+            dustEle.ondrop = function(ev) {
                 if (window.eleDrag) {
-
-                    alert("删除元素");
-                    // window.eleDrag.parentNode.removeChild
+                    var liContent = eleDrag.innerHTML;
+                    alert(liContent + "被删除！");
                     document.getElementById("projectList").removeChild(window.eleDrag);
                 }
                 this.style.color = "gray";
