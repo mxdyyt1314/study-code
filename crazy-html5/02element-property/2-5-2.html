@@ -11,17 +11,17 @@
             margin: 0;
             padding: 0;
         }
-
+        
         .list {
             border: 2px dashed blue;
             overflow: hidden;
             margin: 10px;
         }
-
+        
         .list>h1 {
             margin-left: 10px;
         }
-
+        
         .list>ul>li {
             width: 100px;
             height: 100px;
@@ -33,20 +33,20 @@
             line-height: 100px;
             margin: 10px;
         }
-
+        
         .collect {
             border: 2px dashed green;
             min-height: 100px;
             width: 70%;
             float: left;
         }
-
+        
         .dustbin {
             float: left;
             /*border: 1px dashed skyblue;*/
             margin: 10px;
         }
-
+        
         .dustbin>img {
             width: 65%;
         }
@@ -65,17 +65,20 @@
             <li draggable="true">黑牛程序员</li>
         </ul>
     </div>
-
     <div class="list collect" id="collect">
         <h1 ondragleave="return false;">收藏夹</h1>
         <ul id="collectUl"></ul>
     </div>
-
     <div class="dustbin" id="dustbin">
         <img src="image/dustbin.jpg" alt="" id="dustimg">
     </div>
-
     <script>
+        document.ondragover=function(){
+            return false;
+        };
+        document.ondrop=function(){
+            return false;
+        };
         var lis = document.getElementById("projectList").getElementsByTagName("li");
         for (var i = 0; i < lis.length; i++) {
             var li = lis[i];
