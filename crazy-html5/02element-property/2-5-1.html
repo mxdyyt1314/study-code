@@ -70,9 +70,9 @@
                 <li draggable="true">列表5</li>
                 <li draggable="true">列表6</li>
             </ul>
-            </ul>
         </div>
     </section>
+    <script src="js/demo.js"></script>
     <script>
         window.onload = function() {
             var lis = document.getElementsByTagName("li");
@@ -103,9 +103,8 @@
             };
             dustEle.ondrop = function(ev) {
                 if (window.eleDrag) {
-
-                    alert("删除元素");
-                    // window.eleDrag.parentNode.removeChild
+                    var liContent = eleDrag.innerHTML;
+                    alert(liContent + "被删除！");
                     document.getElementById("projectList").removeChild(window.eleDrag);
                 }
                 this.style.color = "gray";
