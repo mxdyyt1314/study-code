@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>6.3.2属性选择器</title>
+    <style>
+        div {
+            width: 300px;
+            height: 40px;
+            border: 1px solid rgb(221, 167, 231);
+            background: rgb(173, 174, 204);
+            margin-bottom: 10px;
+        }
+        div[id]{
+          background: rgb(195, 222, 210);
+        }
+        div[id=aaa]{
+          background:rgb(205, 217, 186);
+        }
+        div[id^=bbb]{
+          background: rgb(226, 195, 207);
+        }
+        div[id$=c]{
+          background: rgb(227, 203, 193);
+        }
+    </style>
+</head>
+
+<body>
+    <div>没有任何属性的div元素</div>
+    <div id="">带id属性的元素</div>
+    <div id="aaa">带id属性的元素，且属性值为aaa</div>
+    <div id="bbba">带id属性的元素，且属性值以bbb开头</div>
+    <div id="aaaac">带id属性的元素，且属性值以c结尾</div>
+</body>
+
+</html>

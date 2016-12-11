@@ -1,0 +1,12 @@
+table {
+    background-color: #003366;
+    width: 400px;
+}
+
+td {
+    background: #fff;
+    font-family: "Microsoft Yahei";
+    font-size: 20px;
+    text-shadow: -1px 1px 1px gray;
+    padding: 15px 5px;
+}

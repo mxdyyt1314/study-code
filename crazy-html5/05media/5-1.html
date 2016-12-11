@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>使用audio和video元素</title>
+</head>
+<body>
+<audio src="demo.ogg" controls>
+    您的浏览器不支持audio元素
+</audio>
+<br>
+
+<video id="video1" src="demo.ogg" poster="source/helpad.png">
+    您的浏览器不支持video元素
+</video>
+
+<script>
+    window.onload = function () {
+        document.getElementById("video1").onclick = function () {
+            this.controls=true;
+        };
+    };
+
+</script>
+</body>
+</html>
