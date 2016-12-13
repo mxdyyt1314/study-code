@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <title>6.4.7添加多级编号</title>
+    <style>
+        div>h2 {
+            counter-increment: categorycounter;
+            counter-reset: subcounter;
+        }
+
+        div>div {
+            counter-increment: subcounter;
+        }
+
+        div>h2::before {
+            content: counter(categorycounter)".";
+            color: red;
+        }
+
+        div>div::before {
+            content: "第"counter(subcounter)"本.";
+            font-weight: bold;
+            margin-left:24px;
+        }
+    </style>
+</head>
+
+<body>
+    <div>
+        <h2>java疯狂体系图书</h2>
+        <div>疯狂java讲义</div>
+        <div>疯狂Android讲义</div>
+        <h2>其他图书</h2>
+        <div>struts 2.1指南</div>
+        <div>javascript权威指南</div>
+    </div>
+</body>
+
+</html>
