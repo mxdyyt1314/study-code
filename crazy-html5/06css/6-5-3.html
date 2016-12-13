@@ -4,10 +4,23 @@
 <head>
     <meta charset="utf-8">
     <title>6.5.3浏览器专属的属性</title>
+    <style media="screen">
+      ::selection{
+        background: red;
+        color:white;
+      }
+      /*专为基于Gecko内核的浏览器制定css样式*/
+      ::-moz-selection{
+        background: red;
+        color:white;
+      }
+    </style>
 </head>
 
 <body>
-
+<div>
+  <p>测试一下selection效果，233333</p>
+</div>
 </body>
 
 </html>
