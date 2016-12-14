@@ -4,6 +4,16 @@
 <head>
     <meta charset="utf-8">
     <title>6.5.4:not/:target</title>
+    <style>
+        /*匹配复合Selector选择器且必须是命名锚点目标的元素*/
+
+         :target {
+            background: rgb(175, 192, 222);
+        }
+        #not>ul>li:not(#sencond){
+          background: rgb(222, 205, 174);
+        }
+    </style>
 </head>
 
 <body>
@@ -28,6 +38,17 @@
     <div id="ejb">
         <h2>经典java ee企业实战</h2>
         <p>本书详细介绍了JSF、EJB 3、JPA等java EE相关知识</p>
+    </div>
+
+    <div id="not">
+      <ul>
+        <li>1项目</li>
+        <li id="sencond">2项目</li>
+        <li>3项目</li>
+        <li>4项目</li>
+        <li>5项目</li>
+        <li>6项目</li>
+      </ul>
     </div>
 </body>
 
