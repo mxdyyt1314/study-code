@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <title>6.5.1伪类选择器</title>
+    <style>
+        /*定义对作为其父元素的第1个子节点的li元素起作用的css样式*/
+
+        li:first-child {
+            border: 1px solid black;
+        }
+        /*定义对作为其父元素的最后一个子节点的li元素起作用的css样式*/
+
+        li:last-child {
+            background: #aaa;
+        }
+        /*定义对作为其父元素的第2个子节点的li元素起作用的css样式*/
+
+        li:nth-child(2) {
+            background: #888;
+        }
+        /*定义对作为其父元素的倒数第2个子节点的li元素起作用的css样式*/
+
+        li:nth-last-child(2) {
+            font-weight: bold;
+        }
+        /*定义对作为其父元素的唯一的子节点的span元素起作用的css样式*/
+
+        span:only-child {
+            font-size: 30px;
+            font-family: "隶书"
+        }
+
+        table {
+            border-collapse: collapse;
+        }
+
+        td {
+            width: 100px;
+            height: 30px;
+            border: 1px solid rgba(122, 120, 120, 0.18);
+        }
+
+        tr:nth-child(odd) {
+            background: rgb(208, 235, 214);
+        }
+
+        tr:nth-child(even) {
+            background: rgb(217, 222, 190);
+        }
+
+        td:nth-child(odd) {
+            color: rgb(97, 120, 163);
+            font-weight: bold;
+        }
+
+        td:nth-child(even) {
+            color: rgb(95, 144, 109);
+        }
+    </style>
+</head>
+
+<body>
+    <ol>
+        <li>有序排列1</li>
+        <li>有序排列2</li>
+        <li>有序排列3</li>
+        <li>有序排列4</li>
+        <li>有序排列5</li>
+    </ol>
+    <ul>
+        <li>无序排列1</li>
+        <li>无序排列2</li>
+        <li>无序排列3</li>
+        <li>无序排列4</li>
+        <li>无序排列5</li>
+    </ul>
+    <div><span>棒球大联盟</span></div>
+    <table>
+        <tr>
+            <td>1</td>
+            <td>2</td>
+            <td>3</td>
+            <td>4</td>
+            <td>5</td>
+            <td>6</td>
+        </tr>
+        <tr>
+            <td>1</td>
+            <td>2</td>
+            <td>3</td>
+            <td>4</td>
+            <td>5</td>
+            <td>6</td>
+        </tr>
+        <tr>
+            <td>1</td>
+            <td>2</td>
+            <td>3</td>
+            <td>4</td>
+            <td>5</td>
+            <td>6</td>
+        </tr>
+    </table>
+
+    
+</body>
+
+</html>

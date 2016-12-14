@@ -8,3 +8,6 @@ function Person() {
 }
 
 Person.statisis = 11;
+
+
+Person();

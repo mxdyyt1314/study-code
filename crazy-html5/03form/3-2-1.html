@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>3.2.1html5新增的属性和元素</title>
+</head>
+
+<body>
+    <form action="demo" method="GET" id="form1">
+        <input type="text" name="name" value="孟旭东">
+        <input type="password" name="password" value="123">
+        <input type="submit" value="提交">
+    </form>
+    <textarea rows="" cols="" name="description" form="form1">
+        content
+    </textarea>
+    <form method="post">
+        <input type="submit" formaction="login" value="登录">
+        <input type="submit" formaction="regist" value="注册">
+    </form>
+    <form action="">
+        <input type="text" name="name" list="books">
+    </form>
+    <datalist id="books">
+        <option value="java">java入门经典</option>
+        <option value="c#">C#图解教程</option>
+        <option value="javascript">javascript高级编程</option>
+    </datalist>
+</body>
+
+</html>

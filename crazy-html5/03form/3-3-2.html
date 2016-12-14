@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>3.3.2读取文件</title>
+</head>
+<body>
+
+<input type="file" id="file">
+<input type="button" id="btnShow" value="预览">
+
+<script>
+    var fileEle = document.getElementById("file");
+
+    var reader = new FileReader();
+    window.onload = function () {
+        document.getElementById("btnShow").onclick = function () {
+            var files = fileEle.files;
+            if (!files || files.length <= 0) {
+                alert("无图片上传");
+                return;
+            }
+            preview(files[0]);
+        }
+    };
+
+    /**
+     * 预览文本
+     * @param file
+     */
+    function preview(file) {
+        var type = file.type;
+        if (/text\/\w+/.test(type)) {
+            reader.readAsText(file, "utf8");
+            reader.onload = function () {
+                console.log("文本：" + reader.result);
+            };
+        }
+        else if (/image\/\w+/.test(type)) {
+            reader.readAsDataURL(file);
+            reader.onload = function () {
+                console.log("图片：" + reader.result);
+                var imgEle = document.createElement("img");
+                imgEle.src = reader.result;
+                document.body.appendChild(imgEle);
+            };
+            reader.onloadstart = function () {
+                console.log("开始处理数据");
+            }
+            reader.onprogress = function () {
+                console.log("处理中...");
+            }
+            reader.onloadend = function () {
+                console.log("处理结束");
+            };
+        }
+        else {
+            reader.readAsBinaryString(file);
+            reader.onload = function () {
+                console.log("二进制流：" + reader.result);
+            }
+        }
+    }
+</script>
+</body>
+</html>
