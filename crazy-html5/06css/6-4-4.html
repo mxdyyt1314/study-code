@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <title>6.4.4配合quotes属性执行插入</title>
+    <style>
+        div>div {
+            quotes: "《" "》"
+        }
+        div>div::before{
+          content: open-quote;
+        }
+        div>div::after{
+          content:close-quote;
+        }
+    </style>
+</head>
+
+<body>
+
+    <div>
+        <div>疯狂Java讲义</div>
+        <div>疯狂Android讲义</div>
+        <div>轻量Java EE企业应用实战</div>
+    </div>
+
+</body>
+
+</html>

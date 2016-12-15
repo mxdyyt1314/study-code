@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+        select{
+            display: block;
+            width:200px;
+            margin-bottom: 10px;
+            margin:5px;
+            height:20px;
+        }
+        select[multiple]{
+            height:100%;
+        }
+    </style>
+</head>
+
+<body>
+    <select>
+        <option value="1">杨雨婷</option>
+        <option value="2">孟旭东</option>
+    </select>
+    <select name="select" id="sel2" multiple>
+        <option value="">项目1</option>
+        <option value="">项目2</option>
+        <option value="">项目3</option>
+        <option value="">项目4</option>
+    </select>
+    <select name="" id="">
+        <optgroup label="分组一">
+            <option value="">项目1</option>
+            <option value="">项目2</option>
+            <option value="">项目3</option>
+        </optgroup>
+
+        <optgroup label="分组二">
+            <option value="">科目1</option>
+            <option value="">科目2</option>
+            <option value="">科目3</option>
+            <option value="">科目4</option>
+        </optgroup>
+    </select>
+</body>
+
+</html>

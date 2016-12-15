@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <title>6.6.2动态增加立体效果</title>
+    <style>
+        .solid {
+            width: 160px;
+            text-align: center;
+            border-right: #222 3px solid;
+            border-top: #ddd 3px solid;
+            border-left: #ddd 3px solid;
+            border-bottom: #222 3px solid;
+            background: #ccc;
+        }
+    </style>
+</head>
+
+<body>
+    <input type="button" id="btn" value="增加立体效果">
+    <div id="up">
+        有立体效果的图
+    </div>
+    <script>
+        window.onload = function() {
+            document.getElementById("btn").onclick = function() {
+                document.getElementById("up").className = "solid";
+            };
+        };
+    </script>
+</body>
+
+</html>

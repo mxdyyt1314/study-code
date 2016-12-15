@@ -1,4 +1,5 @@
 <!DOCTYPE html>
+<!--suppress ALL -->
 <html lang="en">
 
 <head>
@@ -56,7 +57,6 @@
 </head>
 
 <body>
-
     <section>
         <aside id="dustbin">
             <p>垃圾箱</p>
@@ -70,10 +70,9 @@
                 <li draggable="true">列表5</li>
                 <li draggable="true">列表6</li>
             </ul>
-            </ul>
         </div>
     </section>
-
+    <script src="js/demo.js"></script>
     <script>
         window.onload = function() {
             var lis = document.getElementsByTagName("li");
@@ -83,12 +82,12 @@
                     ev.dataTransfer.effectAllowed = "move";
                     ev.dataTransfer.setData("text", ev.target.innerHTML);
                     ev.dataTransfer.setDragImage(ev.target, 0, 0);
-                    eleDrag = ev.target;
+                    window.eleDrag = ev.target;
                     return true;
                 };
                 li.ondragend = function(ev) {
                     ev.dataTransfer.clearData("text");
-                    eleDrag = null;
+                    window.eleDrag = null;
                     return false;
                 };
             }
@@ -103,22 +102,16 @@
                 return true;
             };
             dustEle.ondrop = function(ev) {
-                if (eleDrag) {
-                    alert("删除");
-                    // eleDrag.parentNode.removeChild
-                    document.getElementById("projectList").removeChild(eleDrag);
+                if (window.eleDrag) {
+                    var liContent = eleDrag.innerHTML;
+                    alert(liContent + "被删除！");
+                    document.getElementById("projectList").removeChild(window.eleDrag);
                 }
                 this.style.color = "gray";
                 return false;
             };
         };
     </script>
-</body>
-
-</html>
-</body>
-
-</html>
 </body>
 
 </html>

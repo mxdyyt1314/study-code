@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>3.4.1使用校验属性执行校验</title>
+</head>
+<body>
+<form action="add">
+    <div>
+        <label for="name">图书名：</label>
+        <input type="text" required name="name" id="name">
+    </div>
+    <div>
+        <label for="price">价格：</label>
+        <input type="number" min="10" max="80" step="5">
+    </div>
+    <div>
+        <label for="isbn">ISBN：</label>
+        <input type="text" pattern="^\d{3}-\d-\d{3}-\d{5}$">
+    </div>
+    <div>
+        <input type="submit" value="提交">
+        <input type="button" value="普通提交" id="btnCommon">
+    </div>
+</form>
+
+<script>
+    window.onload = function () {
+        document.getElementById("btnCommon").onclick = function () {
+            var name = document.getElementById("name");
+            if (name.checkValidity() == false) {
+                alert("图书名称非法");
+            }
+        };
+    };
+</script>
+</body>
+</html>

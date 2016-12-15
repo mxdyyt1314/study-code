@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <title>6.3.7新增的兄弟选择器</title>
+    <style>
+        /*匹配#main元素后面class为long的元素*/
+        #main ~ .long {
+            background: rgb(224, 168, 180);
+        }
+    </style>
+</head>
+
+<body>
+    <div class="long">孟旭东</div>
+    <div id="main">主页面</div>
+    <div class="long">分类</div>
+    <div class="long">购物车</div>
+</body>
+
+</html>

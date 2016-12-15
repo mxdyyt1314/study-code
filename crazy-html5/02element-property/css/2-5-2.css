@@ -1,0 +1,43 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+.list {
+    border: 2px dashed blue;
+    overflow: hidden;
+    margin: 10px;
+}
+
+.list>h1 {
+    margin-left: 10px;
+}
+
+.list>ul>li {
+    width: 100px;
+    height: 100px;
+    background: rgb(202, 224, 194);
+    margin-right: 10px;
+    float: left;
+    list-style: none;
+    text-align: center;
+    line-height: 100px;
+    margin: 10px;
+}
+
+.collect {
+    border: 2px dashed green;
+    min-height: 100px;
+    width: 70%;
+    float: left;
+}
+
+.dustbin {
+    float: left;
+    /*border: 1px dashed skyblue;*/
+    margin: 10px;
+}
+
+.dustbin>img {
+    width: 65%;
+}

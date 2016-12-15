@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <title>6.5.2UI元素状态伪类选择器</title>
+    <style>
+        table {
+            border-collapse: collapse;
+        }
+
+        table td {
+            border: 1px solid rgb(206, 220, 221);
+            padding: 4px 15px;
+        }
+
+        table tr:hover {
+            background: rgb(193, 222, 169);
+        }
+        /*处于激活状态的input元素定义css样式*/
+
+        input:active {
+            background: blue;
+        }
+
+         :focus {
+            text-decoration: underline;
+        }
+
+         :enabled {
+            font-family: "黑体";
+            font-weight: bold;
+            font-size: 20px;
+        }
+
+         :disabled {
+            font-family: "隶书";
+            font-size: 14px;
+        }
+
+         :checked {
+            outline: red solid 5px;
+        }
+        /*页面打开时处于勾选状态的任意元素定义css样式*/
+
+         :default {
+            outline: #bbb solid 5px;
+        }
+        input:read-only{
+          background: blue;
+        }
+        input:read-write{
+          background: gray;
+        }
+        input:-moz-read-only{
+          background: blue;
+        }
+        input:-moz-read-write{
+          background: gray;
+        }
+    </style>
+</head>
+
+<body>
+    <table>
+        <tr>
+            <td>项目1</td>
+            <td>项目1</td>
+        </tr>
+        <tr>
+            <td>项目2</td>
+            <td>项目2</td>
+        </tr>
+        <tr>
+            <td>项目3</td>
+            <td>项目3</td>
+        </tr>
+    </table>
+
+    <button disabled="disabled">不可用的按钮</button><br>
+    <input type="text" disabled dis value="不可用的文本框"><br>
+    <button>可用的按钮</button><br>
+    <input type="text" value="可用的文本框"><br> 男：
+    <input type="radio" value="male" name="gender"><br> 女：
+    <input type="radio" value="female" name="gender"><br> 未知: <input type="radio" value="unkown" checked="checked" name="gender"><br>
+
+    <input type="text" readonly value="只读元素"><br>
+    <input type="text" value="读写元素">
+</body>
+
+</html>

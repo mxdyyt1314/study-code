@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <title>6.4.5配合counter-increment属性添加编号</title>
+    <style>
+        div>div {
+            counter-increment: mycounter;
+        }
+
+        div>div::before {
+            content: counter(mycounter,'lower-greek') '.';
+            font-size: 20px;
+            font-weight: bold;
+        }
+    </style>
+</head>
+
+<body>
+
+    <div>
+        <div>疯狂Java讲义</div>
+        <div>疯狂Android讲义</div>
+        <div>轻量Java EE企业应用实战</div>
+    </div>
+
+</body>
+
+</html>
