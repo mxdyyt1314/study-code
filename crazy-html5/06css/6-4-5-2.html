@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>计数器的嵌套</title>
+    <style>
+        ul {
+            list-style: none;
+            counter-reset: section;
+        }
+        
+        li:before {
+            counter-increment: section;
+            content: counters(section, ".")" ";
+        }
+    </style>
+</head>
+
+<body>
+    <ul>
+        <li>parentItem</li>
+        <li>
+            parentItem
+            <ul>
+                <li>subitem</li>
+                <li>subitem</li>
+            </ul>
+        </li>
+        <li>parentItem</li>
+        <li>
+            parentItem
+            <ul>
+                <li>subitem
+                    <ul>
+                        <li>sub_subItem</li>
+                        <li>sub_subItem</li>
+                    </ul>
+                </li>
+                <li>subitem</li>
+                <li>subitem</li>
+            </ul>
+        </li>
+        <li>parentItem</li>
+    </ul>
+</body>
+
+</html>

@@ -8,23 +8,19 @@
         div>div {
             counter-increment: mycounter;
         }
-
+        
         div>div::before {
-            content: counter(mycounter,'lower-greek') '.';
-            font-size: 20px;
-            font-weight: bold;
+            content: counter(mycounter) '.';
         }
     </style>
 </head>
 
 <body>
-
     <div>
-        <div>疯狂Java讲义</div>
-        <div>疯狂Android讲义</div>
-        <div>轻量Java EE企业应用实战</div>
+        <div>平凡的世界</div>
+        <div>芙蓉镇</div>
+        <div>你不知道的中国史</div>
     </div>
-
 </body>
 
 </html>
