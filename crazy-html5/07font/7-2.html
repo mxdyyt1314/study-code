@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>7.2css3支持的颜色表示方式</title>
+    <style>
+        body {
+            background: lightgray;
+        }
+        
+        .container {
+            position: absolute;
+            top: 0;
+            left: 0;
+        }
+        
+        div>div {
+            width: 400px;
+            height: 40px;
+        }
+    </style>
+    <script>
+        for (var i = 0; i < 110; i++) {
+            document.write("测试文字1");
+        }
+    </script>
+</head>
+
+<body>
+    <div class="container">
+        <div style="background: rgba(255, 0, 255, 0.7);"></div>
+        <div style="background:hsla(120,80%,50%,0.7);"></div>
+    </div>
+</body>
+
+</html>
