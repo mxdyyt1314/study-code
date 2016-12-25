@@ -2,3 +2,7 @@
 .idea
 .tags*
 .tags1
+books
+node_modules
+*.log
+*.json

@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>计数器</title>
+    <style>
+        body {
+            counter-reset: section;
+        }
+        
+        h3::before {
+            counter-increment: section;
+            content: counter(section)". ";
+        }
+    </style>
+</head>
+
+<body>
+    <div>
+        <h3>平凡的世界</h3>
+        <h3>芙蓉镇</h3>
+        <h3>你不知道的中国史</h3>
+    </div>
+</body>
+
+</html>

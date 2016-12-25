@@ -4,7 +4,7 @@
      li.ondragstart = function (ev) {
          console.log("move");
          ev.dataTransfer.setData("text/plain", "<item>" + ev.target.innerHTML);
-     }
+     };
  }
  var collectEle = document.getElementById("collect");
  collectEle.ondragover = function (ev) {
