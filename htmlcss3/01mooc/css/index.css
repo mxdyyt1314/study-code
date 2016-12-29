@@ -1,0 +1,184 @@
+* {
+    padding: 0;
+    margin: 0;
+    border: none;
+    font-family: Arial;
+    font-size: 14px;
+}
+
+a {
+    text-decoration: none;
+}
+
+ul>li {
+    list-style: none;
+}
+
+header {
+    position: relative;
+    height: 80px;
+    background: #000;
+}
+
+header>.container {
+    width: 90%;
+    margin: 0 auto;
+}
+
+header>.container>.logo {
+    margin: 5px 15px;
+    float: left;
+}
+
+header>.container>nav {
+    float: right;
+}
+
+header>.container>nav>a {
+    display: block;
+    font-size: 23px;
+    height: 73px;
+    width: 110px;
+    float: left;
+    line-height: 73px;
+    text-align: center;
+    color: #fff;
+}
+
+header>.container>nav>a:nth-child(1) {
+    background: #433b90;
+}
+
+header>.container>nav>a:nth-child(2) {
+    background: #017fcb;
+}
+
+header>.container>nav>a:nth-child(3) {
+    background: #78b917;
+}
+
+header>.container>nav>a:nth-child(4) {
+    background: #feb800;
+}
+
+header>.container>nav>a:nth-child(5) {
+    background: #f27c01;
+}
+
+header>.container>nav>a:nth-child(6) {
+    background: #d40112;
+}
+
+header>.container>nav>a.active {
+    padding-bottom: 7px;
+}
+
+header>.container>nav>a:hover {
+    padding-bottom: 7px;
+}
+
+
+/*.banner {
+    position: relative;
+    background: #eaeaea;
+}
+
+.banner>ul {
+    position: relative;
+    width: 1490px;
+    height: 538px;
+    margin: 0 auto;
+    padding-top: 10px;
+}
+
+.banner>ul>li {
+    position: absolute;
+    width: 610px;
+    height: 300px;
+    overflow: hidden;
+    z-index: 1;
+}
+
+.banner>ul>li.active {
+    left: 0;
+    right: 0;
+    width: 960px;
+    height: 460px;
+    margin: auto;
+    top: 37px;
+    z-index: 2;
+}
+
+.banner>ul>li.left {
+    left: 0;
+    top: 0;
+    bottom: 0;
+    margin: auto;
+}
+
+.banner>ul>li.right {
+    top: 0;
+    right: 0;
+    bottom: 0;
+    margin: auto;
+}
+
+.banner>ul>li>img {
+    position: absolute;
+    left: -30%;
+    height: 100%;
+}*/
+
+
+/*------banner样式-----------*/
+
+.banner {
+    position: relative;
+    background: #eaeaea;
+}
+
+.banner>ul {
+    position: relative;
+    width: 1490px;
+    height: 461px;
+    padding-top: 38px;
+    padding-bottom: 40px;
+    margin: 0 auto;
+}
+
+.banner>ul>li {
+    width: 610px;
+    height: 300px;
+    overflow: hidden;
+    z-index: 1;
+    position: absolute;
+}
+
+.banner>ul>li.active {
+    left: 0;
+    right: 0;
+    margin: auto;
+    z-index: 2;
+    width: 960px;
+    height: 460px;
+    border:1px solid #ffffff;
+}
+
+.banner>ul>li.left {
+    left: 0;
+    top: 0;
+    bottom: 0;
+    margin: auto;
+}
+
+.banner>ul>li.right {
+    right: 0;
+    top: 0;
+    bottom: 0;
+    margin: auto;
+}
+.banner>ul>li>img{
+    left:-30%;
+    height:100%;
+    position:absolute;
+}

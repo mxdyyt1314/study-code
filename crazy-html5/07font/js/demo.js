@@ -1,4 +1,3 @@
 function aa() {
     window.alert("");
 }
-
