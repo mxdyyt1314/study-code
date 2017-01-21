@@ -2,9 +2,115 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>$Title$</title>
+    <title>IMOOC</title>
+    <style>
+        * {
+            padding: 0;
+            margin: 0;
+            font-size: 14px;
+            font-family: "Microsoft Yahei", serif;
+        }
+
+        .main {
+            width: 1274px;
+            margin: 20px auto;
+        }
+
+        .main > aside {
+            float: left;
+            width: 450px;
+        }
+
+        .main > aside > h1 {
+            margin-left: 34px;
+        }
+
+        .main > aside > dl {
+            width: 417px;
+            margin-left: 51px;
+            margin-bottom: 26px;
+            position: relative;
+            height:75px;
+        }
+
+        .main > aside > dl > dd:last-of-type {
+            position: absolute;
+            top: 0;
+            left: 0;
+        }
+        .main>aside>dl>dt{
+            position: absolute;
+            left:75px;
+            top:-1px;
+            font-weight:bold;
+            font-size:16px;
+        }
+        .main > aside > dl > dd:first-of-type {
+            position: absolute;
+            top: 23px;
+            left: 74px;
+            font-size:14px;
+        }
+
+        .main > article {
+            float: right;
+            width: 720px;
+        }
+
+        .main h1 {
+            font-size: 30px;
+            color: #000;
+            margin-bottom: 32px;
+        }
+
+        .main h1 > samp {
+            font-size: 30px;
+            color: #7c7c7c;
+        }
+    </style>
 </head>
 <body>
-$END$
+<!--  在此完成网页的HTML代码-->
+<section class="main">
+    <aside>
+        <h1>Recent <samp>Course</samp></h1>
+        <dl>
+            <dt>Hyper Text Markup Language</dt>
+            <dd>HTML is the standard markup language used to create web pages and its elements form the building blocks
+                of all websites.
+            </dd>
+            <dd><img src="http://climg.mukewang.com/582e61290001787900500051.png"></dd>
+        </dl>
+        <dl>
+            <dt>Cascading Style Sheets</dt>
+            <dd>Cascading Style Sheets (CSS) is a simple mechanism for adding style (e.g.,fonts,colors,spacing) to Web
+                documents.
+            </dd>
+            <dd><img src="http://climg.mukewang.com/582e61290001787900500051.png"></dd>
+        </dl>
+        <dl>
+            <dt>JavaScript</dt>
+            <dd>JavaScript is a high-level,dynamic,untyped,and Interpreted programming language.</dd>
+            <dd><img src="http://climg.mukewang.com/582e61290001787900500051.png"></dd>
+        </dl>
+        <dl>
+            <dt>AngularJS</dt>
+            <dd>AngularJS is an open-source web application framework mainly maintained by Google and by a community of
+                indmduals and...
+            </dd>
+            <dd><img src="http://climg.mukewang.com/582e61290001787900500051.png"></dd>
+        </dl>
+    </aside>
+    <article>
+        <h1>Welcome to <samp>Massive Open Online Course!</samp></h1>
+        <p>We provide the latest knowledge to help you cope with the changing world!</p>
+        <img src="http://climg.mukewang.com/582e61180001ede703300130.jpg">
+        <p>We hope that all the students who love the Internet can be more convenient access to learning resources,using
+            the Internet thinking to change out learning.</p>
+        <p>Focus on IT skills education MOOC,consistent with the development trend of the Internet down to earth's MOOC.
+            We are free,we only teach useful,we concentrate on education.</p>
+    </article>
+    <div style="clear:both"></div>
+</section>
 </body>
 </html>

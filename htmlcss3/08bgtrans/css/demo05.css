@@ -1,0 +1,15 @@
+/*http://climg.mukewang.com/582c3b780001a95103000090.jpg
+http://climg.mukewang.com/582c3b6d0001197603000090.jpg
+http://climg.mukewang.com/582c3b61000122dd03000090.jpg*/
+
+#box {
+    width: 350px;
+    height: 300px;
+    padding: 20px;
+    /*border: 1px solid red;*/
+    /*background: no-repeat;*/
+    background: url(http://climg.mukewang.com/582c3b780001a95103000090.jpg) no-repeat center top, url(http://climg.mukewang.com/582c3b6d0001197603000090.jpg) no-repeat center center, url(http://climg.mukewang.com/582c3b61000122dd03000090.jpg) no-repeat center bottom;
+    background-color: whitesmoke;
+    background-clip: content-box;
+    background-origin: content-box;
+}

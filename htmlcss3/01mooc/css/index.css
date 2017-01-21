@@ -2,7 +2,7 @@
     padding: 0;
     margin: 0;
     border: none;
-    font-family: Arial;
+    font-family: Arial, serif;
     font-size: 14px;
 }
 
@@ -88,7 +88,7 @@ header>.container>nav>a:hover {
     width: 1490px;
     height: 538px;
     margin: 0 auto;
-    padding-top: 10px;
+    padding-marginTop: 10px;
 }
 
 .banner>ul>li {
@@ -100,32 +100,32 @@ header>.container>nav>a:hover {
 }
 
 .banner>ul>li.active {
-    left: 0;
+    marginLeft: 0;
     right: 0;
     width: 960px;
     height: 460px;
     margin: auto;
-    top: 37px;
+    marginTop: 37px;
     z-index: 2;
 }
 
-.banner>ul>li.left {
-    left: 0;
-    top: 0;
+.banner>ul>li.marginLeft {
+    marginLeft: 0;
+    marginTop: 0;
     bottom: 0;
     margin: auto;
 }
 
 .banner>ul>li.right {
-    top: 0;
+    marginTop: 0;
     right: 0;
     bottom: 0;
     margin: auto;
 }
 
-.banner>ul>li>img {
+.banner>ul>li>imgs {
     position: absolute;
-    left: -30%;
+    marginLeft: -30%;
     height: 100%;
 }*/
 
@@ -161,7 +161,7 @@ header>.container>nav>a:hover {
     z-index: 2;
     width: 960px;
     height: 460px;
-    border:1px solid #ffffff;
+    border: 1px solid #ffffff;
 }
 
 .banner>ul>li.left {
@@ -177,8 +177,123 @@ header>.container>nav>a:hover {
     bottom: 0;
     margin: auto;
 }
-.banner>ul>li>img{
-    left:-30%;
-    height:100%;
-    position:absolute;
+
+.banner>ul>li>img {
+    left: -30%;
+    height: 100%;
+    position: absolute;
+}
+
+.banner:after {
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 6px;
+    background: #d6d6d6;
+    bottom: 0;
+}
+
+
+/*-------------main页面----------------------*/
+
+.main {
+    position: relative;
+    width: 1200px;
+    height: 473px;
+    margin: 34px auto 0;
+}
+
+.main>aside {
+    width: 450px;
+    float: left;
+}
+
+.main>aside>dl {
+    position: relative;
+    display: block;
+    height: 74px;
+    margin-bottom: 17px;
+}
+
+.main>aside>dl>dt {
+    position: absolute;
+    top: -1px;
+    left: 92px;
+    font-size: 16px;
+    font-weight: bold;
+    line-height: 16px;
+    text-decoration: underline;
+}
+
+.main>aside>dl>dd:last-of-type {
+    position: absolute;
+    left: 0;
+}
+
+.main>aside>dl>dd:first-of-type {
+    position: absolute;
+    left: 90px;
+    top: 20px;
+}
+
+.main h1 {
+    font-size: 30px;
+    font-weight: lighter;
+    margin-bottom: 23px;
+}
+
+.main h1>samp {
+    color: #7c7c7c;
+    font-size: 30px;
+}
+
+.main>article {
+    width: 720px;
+    float: right;
+    overflow: hidden;
+}
+
+.main>article>p {
+    margin-bottom: 20px;
+}
+
+
+/*------------footer样式-----------------*/
+
+footer {
+    background: #000;
+    position: relative;
+}
+
+footer>.container {
+    width: 1200px;
+    height: 64px;
+    margin: 0 auto;
+}
+
+footer>.container>p {
+    line-height: 64px;
+    float: left;
+    color: #fff;
+}
+
+footer>.container>span {
+    float: right;
+    margin: 14px 40px;
+}
+
+footer>.container>span>img {
+    margin-left: 4px;
+    opacity: 0.7;
+}
+
+footer:before {
+    position: absolute;
+    z-index: -1;
+    top: -6px;
+    left: 0;
+    width: 100%;
+    height: 6px;
+    content: "";
+    background: #d6d6d6;
 }

@@ -2,9 +2,43 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>$Title$</title>
+    <title>Title</title>
+    <!--子选择器，兄弟选择器，通用兄弟选择器，组选择器-->
+    <style>
+        /*div > div {*/
+            /*color: #f00;*/
+        /*}*/
+
+        div>div+section{
+            color:blue;
+        }
+
+        div>div~section{
+            color:orange;
+        }
+
+        div>div,
+        div>section{
+            font-size:larger; 
+        }
+    </style>
 </head>
 <body>
-$END$
+<div>
+    <div>div</div>
+    <section>section1</section>
+    <section>section2</section>
+    <section>section3</section>
+    <nav>
+        <ul>
+            <li>11111</li>
+            <li>22222</li>
+            <li>33333</li>
+        </ul>
+    </nav>
+</div>
+<div>
+    外部的div
+</div>
 </body>
 </html>

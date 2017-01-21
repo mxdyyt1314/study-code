@@ -1,0 +1,307 @@
+/*---------------------------全局---------------------------*/
+
+* {
+    margin: 0;
+    padding: 0;
+    font-size: 12px;
+    font-family: 'Microsoft YaHei UI', serif;
+}
+
+a {
+    text-decoration: none;
+}
+
+ul > li, ol > li {
+    list-style: none;
+}
+
+/*---------------------------header部分---------------------------*/
+header {
+    width: 100%;
+    background: #2e2e2e;
+    height: 91px;
+}
+
+header > .container {
+    width: 85%;
+    margin: 0 auto;
+    position: relative;
+}
+
+header > .container > .logo {
+    position: absolute;
+    height: 31px;
+    left: 0;
+    top: 0;
+    bottom: 0;
+    margin: auto;
+}
+
+header > .container > nav {
+    float: right;
+}
+
+header > .container > nav > a {
+    color: #fff;
+    font-size: 16px;
+    line-height: 91px;
+    margin-right: 51px;
+}
+
+header > .container > nav > a:last-of-type {
+    margin-right: 0;
+}
+
+header > .container > nav > a:hover {
+    color: #f46208;
+}
+
+/*---------------------------banner---------------------------*/
+.banner {
+    position: relative;
+}
+
+.banner > img {
+    width: 100%;
+    max-height: 676px;
+}
+
+.banner > article {
+    position: absolute;
+    width: 813px;
+    height: 134px;
+    margin: auto;
+    right: 0;
+    left: 0;
+    top: 0;
+    bottom: 0;
+}
+
+.banner > article > h1 {
+    font-size: 52px;
+    color: #fff;
+}
+
+.banner > article > p {
+    font-size: 30px;
+    color: #fff;
+}
+
+/*---------------------------portfolio---------------------------*/
+.portfolio {
+    position: relative;
+}
+
+.portfolio > ul {
+    overflow: hidden;
+    width: 530px;
+    margin: 0 auto 52px;
+}
+
+.portfolio > ul > li {
+    float: left;
+    font-size: 16px;
+    border: 1px solid #f46208;
+    line-height: 42px;
+    padding-left: 13px;
+    padding-right: 13px;
+    margin-right: 15px;
+}
+
+.portfolio > img {
+    width: 100%;
+    max-height: 559px;
+}
+
+/*---------------------------stats---------------------------*/
+.stats {
+    position: relative;
+}
+
+.stats > .data {
+    width: 960px;
+    margin: 0 auto;
+    overflow: hidden;
+}
+
+.stats > .data > dl {
+    float: left;
+    width: 25%;
+    height: 152px;
+    text-align: center;
+    position: relative;
+    margin-bottom: 114px;
+}
+
+.stats > .data > dl > dd:last-of-type {
+    width: 48px;
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    margin: auto;
+}
+
+.stats > .data > dl > dd:first-of-type {
+    position: absolute;
+    width: 100%;
+    text-align: center;
+    bottom: 0;
+    font-size: 24px;
+    color: #f46208;
+}
+
+.stats > .data > dl > dt {
+    position: absolute;
+    text-align: center;
+    top: 76px;
+    font-size: 20px;
+    width: 100%
+}
+
+/*---------------------------team---------------------------*/
+.team {
+    background: #2e2e2e;
+    position: relative;
+    overflow: hidden;
+}
+
+.team > article.cm_article > p {
+    color: #fff;
+}
+
+.team > .person {
+    width: 915px;
+    height: 264px;
+    overflow: hidden;
+    margin: 0 auto 95px;
+}
+
+.team > .person > dl {
+    width: 33.33%;
+    height: 264px;
+    float: left;
+    text-align: center;
+    position: relative;
+}
+
+.team > .person > dl > dd:last-of-type {
+    position: absolute;
+    width: 205px;
+    top: 0;
+    left: 0;
+    right: 0;
+    margin: auto;
+}
+
+.team > .person > dl > dt {
+    position: absolute;
+    width: 90%;
+    top: 206px;
+    font-size: 14px;
+    color: #fff;
+}
+
+.team > .person > dl > dd:first-of-type {
+    position: absolute;
+    width: 90%;
+    bottom: 0;
+    font-size: 12px;
+    color: #fff;
+}
+
+/*---------------------------contact---------------------------*/
+.contact {
+    position: relative;
+    overflow: hidden;
+}
+
+.contact > form {
+    width: 958px;
+    margin: 0 auto;
+}
+
+.contact > form > .line:first-of-type > input {
+    width: 438px;
+    height: 52px;
+    padding-left: 11px;
+    padding-right: 11px;
+    line-height: 52px;
+    margin-right: 25px;
+}
+
+.contact > form > .line {
+    margin-bottom: 15px;
+}
+
+.contact > form > .line.sub {
+    margin-top: 25px;
+    margin-bottom: 110px;
+}
+
+.contact > form > input {
+    font-size: 14px;
+}
+
+.contact > form > .line:first-of-type > input:last-of-type {
+    margin-right: 0;
+}
+
+.contact > form textarea {
+    width: 934px;
+    height: 272px;
+    padding-left: 10px;
+    padding-right: 10px;
+    line-height: 272px;
+    resize: none;
+}
+
+.contact > form input[type=submit] {
+    display: block;
+    width: 200px;
+    height: 57px;
+    background: #f46208;
+    border: none;
+    font-size: 20px;
+    margin: 0 auto;
+    color: #fff;
+    text-align: center;
+}
+
+/*---------------------------footer---------------------------*/
+footer{
+    position:relative;
+    overflow:hidden;
+    background:#000000;
+    width:100%;
+    height:110px;
+}
+footer>p{
+    color:#fff;
+    font-size:16px;
+    width:264px;
+    margin:0 auto;
+    line-height:110px;
+}
+
+
+
+/*---------------------------article统一样式---------------------------*/
+article.cm_article {
+    width: 786px;
+    margin: 110px auto 58px;
+    text-align: center;
+}
+
+article.cm_article > h1 {
+    font-size: 32px;
+    color: #f46208;
+    margin-bottom: 44px;
+}
+
+article.cm_article > p {
+    font-size: 16px;
+    color: #000;
+}
+
+

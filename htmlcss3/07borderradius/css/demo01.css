@@ -1,0 +1,41 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+.bubble {
+    position: relative;
+    width: 500px;
+    height: 300px;
+    border: 1px solid black;
+    border-radius: 50%;
+    -webkit-border-radius: 50%;
+    -moz-border-radius: 50%;
+    -ms-border-radius: 50%;
+    -o-border-radius: 50%;
+}
+
+.bubble::before,
+.bubble::after {
+    content:"";
+    position: absolute;
+    display: block;
+    border:1px solid black;
+    border-radius: 50%;
+    -webkit-border-radius: 50%;
+    -moz-border-radius: 50%;
+    -ms-border-radius: 50%;
+    -o-border-radius: 50%;
+}
+.bubble::before{
+    width:50px;
+    height: 50px;
+    bottom:-10px;
+    right:25px;
+}
+.bubble::after{
+    width:20px;
+    height:20px;
+    bottom:-40px;
+    right:5px; 
+}

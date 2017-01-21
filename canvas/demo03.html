@@ -2,9 +2,34 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>$Title$</title>
+    <title>绘制曲线与圆形-魔力之眼</title>
 </head>
 <body>
-$END$
+<canvas width="1000" height="800" id="canvas"></canvas>
+
+<script>
+    window.onload = function () {
+        var canvas = document.getElementById("canvas");
+        var cxt = canvas.getContext("2d");
+        var color = null;
+        for (var i = 10; i > 0; i--) {
+
+        }
+        var index = 10;
+        setInterval(function () {
+            index--;
+            if (index <= 0) {
+                index = 10;
+            }
+            cxt.beginPath();
+            cxt.arc(300, 300, index * 30 + 1, 0, 2 * Math.PI);
+            color = "#" + parseInt(Math.random() * 255, 16);
+            console.log(color);
+            cxt.fillStyle = color;
+            cxt.fill();
+            cxt.stroke();
+        }, 30);
+    };
+</script>
 </body>
 </html>

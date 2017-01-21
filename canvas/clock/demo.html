@@ -2,9 +2,81 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>$Title$</title>
+    <title>小球碰撞效果</title>
+    <style>
+        #canvas {
+            border: 1px solid #78b917;
+        }
+    </style>
 </head>
 <body>
-$END$
+<canvas id="canvas" width="1366" height="768"></canvas>
+
+<script>
+    //    var ball = {x: 10, y: 10, r: 30, g: 0.1, vx: 10, vy: 0};
+    var balls = [];
+
+
+    window.onload = function () {
+        var canvas = document.getElementById("canvas");
+        var cxt = canvas.getContext("2d");
+
+        for (var i = 0; i < 10; i++) {
+            balls.push({
+                x: Math.random() * cxt.canvas.width - 10,
+                y: Math.random() * cxt.canvas.width - 10,
+                r: 10,
+                g: Math.random(),
+                vx: Math.random() * 20,
+                vy: Math.random() * 20
+            })
+
+        }
+//        console.log(balls);
+//        for (var i = 0; i < balls.length; i++) {
+//            cxt.beginPath();
+//            cxt.arc(parseInt(balls[i].x), parseInt(balls[i].y), parseInt(balls[i].r), 0, 2 * Math.PI);
+//            cxt.fillStyle = "red";
+//            cxt.fill();
+//        }
+
+
+        setInterval(function () {
+
+            cxt.clearRect(0, 0, cxt.canvas.width, cxt.canvas.height);
+
+            function renderBall(ball) {
+                ball.x += ball.vx;
+                ball.vy += ball.g;
+                ball.y += ball.vy;
+                if (ball.y + ball.r > cxt.canvas.height) {
+                    ball.y = cxt.canvas.height - ball.r;
+                    ball.vy = -ball.vy;
+                }
+                if (ball.x - ball.r <= 0) {
+                    ball.x = ball.r;
+                    ball.vx = -ball.vx;
+                }
+                if (ball.x + ball.r >= cxt.canvas.width) {
+                    ball.x = cxt.canvas.width - ball.r;
+                    ball.vx = -ball.vx;
+                }
+                if (ball.y - ball.r <= 0) {
+                    ball.y = ball.r;
+                    ball.vy = -ball.vy;
+                }
+            }
+
+            for (var i = 0; i < balls.length; i++) {
+                renderBall(balls[i]);
+                cxt.beginPath();
+                cxt.arc(balls[i].x, balls[i].y, balls[i].r, 0, 2 * Math.PI);
+                cxt.fillStyle = "red";
+                cxt.fill();
+            }
+        }, 3);
+
+    };
+</script>
 </body>
 </html>

@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>background-clip</title>
+    <style>
+        #box {
+            width: 500px;
+            height: 500px;
+            border: 50px solid rgba(109, 29, 98, 0.4);
+            padding: 50px;
+            position: relative;
+            background: url(imgs/bg.jpg) repeat center center;
+            background-clip: content-box;
+            background-clip: padding-box;
+            background-clip: border-box;
+        }
+        
+        .padding-box {
+            position: absolute;
+            width: 500px;
+            height: 500px;
+            top: 0;
+            left: 0;
+            border: 50px solid rgba(20, 138, 110, 0.3);
+        }
+    </style>
+</head>
+
+<body>
+    <div id="box">
+        <div class="padding-box"></div>
+        <div class="content-box"></div>
+    </div>
+</body>
+
+</html>

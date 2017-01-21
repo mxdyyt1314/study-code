@@ -2,9 +2,49 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>$Title$</title>
+    <title>七巧板</title>
 </head>
 <body>
-$END$
+<canvas id="canvas" width="1000" height="1000"></canvas>
+<script>
+    /**
+     * 七巧板每个模块的节点坐标、颜色
+     * @type {[*]}
+     */
+    var trans = [
+        {points: [[0, 0], [500, 500], [0, 1000]], color: "#69bfd0"},
+        {points: [[0, 0], [1000, 0], [500, 500]], color: "#c9ff67"},
+        {points: [[0, 1000], [500, 1000], [250, 750]], color: "#f68ecd"},
+        {points: [[250, 750], [500, 1000], [750, 750], [500, 500]], color: "#a495be"},
+        {points: [[500, 1000], [1000, 1000], [1000, 500]], color: "#f6cb27"},
+        {points: [[1000, 0], [1000, 500], [750, 750], [750, 250]], color: "#f13d64"},
+        {points: [[750, 250], [500, 500], [750, 750]], color: "#f9f61b"}
+    ];
+
+    //获取canvas元素
+    var canvas = document.getElementById("canvas");
+    //获取context2D对象
+    var cxt = canvas.getContext("2d");
+
+    for (var i = 0; i < trans.length; i++) {
+        draw(trans[i], cxt);
+    }
+
+    function draw(tran, cxt) {
+        cxt.beginPath();
+
+        cxt.moveTo(tran.points[0][0] / 2, trans[0][1] / 2);
+
+        for (var i = 0; i < tran.points.length; i++) {
+            cxt.lineTo(tran.points[i][0] / 2, tran.points[i][1] / 2);
+        }
+
+        cxt.closePath();
+
+        cxt.fillStyle = tran.color;
+        cxt.fill();
+        cxt.stroke();
+    }
+</script>
 </body>
 </html>

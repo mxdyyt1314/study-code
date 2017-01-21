@@ -2,9 +2,32 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>$Title$</title>
+    <title>Title</title>
 </head>
 <body>
-$END$
+<canvas id="canvas"></canvas>
+
+<script>
+    window.onload = function () {
+        var canvas = document.getElementById("canvas");
+        canvas.width = 1366;
+        canvas.height = 768;
+
+        var context = canvas.getContext("2d");
+
+        context.moveTo(0, 0);
+        context.lineTo(1000, 700);
+        context.lineTo(600, 200);
+        context.lineTo(0, 0);
+
+        context.lineWidth = 6;
+        context.strokeStyle = "red";
+
+        context.fillStyle = "black";
+        context.fill();
+
+        context.stroke();
+    };
+</script>
 </body>
 </html>
